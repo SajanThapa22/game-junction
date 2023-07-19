@@ -8,14 +8,14 @@ const App = () => {
     <Grid
       templateAreas={{
         base: `"nav" "main"`,
-        md: `"nav nav" "aside main"`,
+        lg: `"nav nav" "aside main"`,
       }}
     >
       <GridItem area={"nav"}>
         <NavBar />
       </GridItem>
-      <Show above="md">
-        <GridItem area={"aside"}>Aside</GridItem>
+      <Show above="lg">
+        <GridItem area={"aside"}></GridItem>
       </Show>
       <GridItem area={"main"}>
         <GameGrid />
