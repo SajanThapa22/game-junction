@@ -2,12 +2,7 @@ import { GameQuery } from "../App";
 import { FetchResponse } from "../services/api-client";
 import apiClient from "../services/api-client";
 import { useQuery } from "@tanstack/react-query";
-
-export interface Platform {
-  id: number;
-  name: string;
-  slug: string;
-}
+import { Platform } from "./usePlatform";
 
 export interface Game {
   id: number;
@@ -25,6 +20,8 @@ const useGames = (gameQuery: GameQuery) =>
       apiClient
         .get<FetchResponse<Game>>("/games", {
           params: {
+            page: 2,
+            page_size: 9,
             genres: gameQuery.genre?.id,
             parent_platforms: gameQuery.platform?.id,
             ordering: gameQuery.sortOrder,
@@ -32,6 +29,7 @@ const useGames = (gameQuery: GameQuery) =>
           },
         })
         .then((res) => res.data),
+    refetchOnWindowFocus: false,
   });
 
 export default useGames;
