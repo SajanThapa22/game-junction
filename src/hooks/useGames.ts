@@ -27,11 +27,12 @@ const useGames = (gameQuery: GameQuery) =>
           page: pageParam,
         },
       }),
-    refetchOnWindowFocus: false,
-    retry: 2,
     getNextPageParam: (lastPage, allPages) => {
       return lastPage.next ? allPages.length + 1 : undefined;
     },
+    staleTime: 24 * 60 * 60 * 1000,
+    refetchOnWindowFocus: false,
+    retry: 2,
   });
 
 export default useGames;
