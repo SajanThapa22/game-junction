@@ -4,7 +4,6 @@ import GameCard from "./GameCard";
 import GameCardContainer from "./GameCardContainer";
 import GameCardSkeleton from "./GameCardSkeleton";
 import { GameQuery } from "../App";
-import { useState } from "react";
 import React from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 
@@ -12,8 +11,6 @@ interface Props {
   gameQuery: GameQuery;
 }
 const GameGrid = ({ gameQuery }: Props) => {
-  const pageSize = 6;
-  const [page, setPage] = useState(1);
   const {
     data,
     error,
