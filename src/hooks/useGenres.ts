@@ -19,3 +19,4 @@ const useGenres = () => {
     initialData: genres,
   });
 };
+export default useGenres;
