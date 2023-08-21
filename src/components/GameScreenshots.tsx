@@ -12,7 +12,7 @@ const GameScreenshots = ({ gameId }: Props) => {
   return (
     <>
       <SimpleGrid
-        padding={5}
+        marginY={3}
         spacing={5}
         columns={{
           sm: 1,
