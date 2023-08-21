@@ -6,7 +6,6 @@ import croppedImageUrl from "../services/image-url";
 import Emoji from "./Emoji";
 import PlatformIconList from "./PlatformIconList";
 import { Link } from "react-router-dom";
-import "../cards.css";
 
 interface Props {
   game: Game;
