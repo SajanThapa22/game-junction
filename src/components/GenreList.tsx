@@ -6,6 +6,7 @@ import {
   Spinner,
   Button,
   Heading,
+  Box,
 } from "@chakra-ui/react";
 import useGenres from "../hooks/useGenres";
 import croppedImageUrl from "../services/image-url";

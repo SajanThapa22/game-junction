@@ -14,7 +14,7 @@ const GameTrailer = ({ gameId }: Props) => {
   return first ? (
     <video src={first.data[480]} poster={first.preview} controls />
   ) : (
-    "Game trailer not available"
+    <p>Trailer not available</p>
   );
 };
 
